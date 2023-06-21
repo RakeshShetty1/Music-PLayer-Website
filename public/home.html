@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SoundPulse Music Player | SoundPPulse</title>
+  <!-- linked .css file here -->
+  <link rel="stylesheet" href="home.css">
+  <!-- linked css bootstrap here -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <!-- linked js bootstrap here -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <link rel="shortcut icon"
+    href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6KPiPXerJXj5tnVBElVXrROMAoeg8txSszQ&usqp=CAU"
+    type="image/x-icon">
+
+  <script src="home.js"></script>
+  
+
+</head>
+
+<body>
+  <audio id="audioPlayer"></audio>
+  <nav class="navbar navbar-expand-lg sticky-top" style="background-color: #efbbff; border-radius: 5px 5px 20px 20px;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6KPiPXerJXj5tnVBElVXrROMAoeg8txSszQ&usqp=CAU"
+          alt="" width="30" height="30">
+      </a>
+
+      <a class="navbar-brand" href="#" style="color:#800080"><b>SoundPulse</b></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!-- me means padding from end change it to ms so it will give padding in the start  -->
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item mytags">
+            <a class="nav-link active" aria-current="page" href="#" style="color:#800080">Home</a>
+          </li>
+
+          <li class="nav-item mytags">  
+            <a class="nav-link active " aria-current="page" href="http://localhost:3000/player" style="color:#800080">Player</a>
+          </li> 
+
+          <li class="nav-item mytags">
+            <a class="nav-link active " aria-current="page" href="http://localhost:3000/about"  style="color:#800080">About</a>
+          </li>
+
+         
+
+          <li class="nav-item mytags">
+            <a class="nav-link active " aria-current="page" href="http://localhost:3000/contact"  style="color:#800080">Contact</a>
+          </li>
+
+          <!-- <li class="nav-item">
+            <a class="nav-link active " aria-current="page" href="#" style="color:#800080">Blogs</a>
+          </li> -->
+
+          <li class="nav-item ">
+            <!-- <a class="nav-link active btn" aria-current="page" href="#" style="color:#efbbff;background:#660066;margin-right:2px">Register</a> -->
+            <a href="http://localhost:3000/register" 
+              style="color:#800080 ;text-decoration: none;">
+              <input class=" btn" type="button" value="Register"
+                style="color:#efbbff;background:#660066;margin-right:2px"></a>
+          </li>
+
+          <li class="nav-item ">
+            <!-- <a class="nav-link active btn" aria-current="page" href="#" style="color:#efbbff;background:#660066">Login</a> -->
+            <a href="http://localhost:3000/login" 
+              style="color:#800080 ;text-decoration: none;"> <input class="btn" type="button" value="Log Out"
+                style="color:#efbbff;background:#660066;margin-right:2px"></a>
+
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- END OF HEADER -->
+
+  <section>
+    <h2 id="text" style="color:#efbbff">
+      <span>It's time for a </span><br> MUSIC
+    </h2>
+    <!-- <a href="#" id="btn">Explore</a> -->
+  </section>
+
+  <div class="welcome">
+    <span>Welcome to SoundPulse</span>
+  </div>
+
+
+
+  <!-- slider -->
+
+  <div class="row justify-content-center">
+    <div class="col-sm-12 col-md-8">
+      <div id="carouselExampleFade" class="carousel slide carousel-fade">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/A6.jpg" class="d-block w-100" alt="...">
+          </div>
+          <div class="carousel-item">
+                        <img src="images/A5.jpg" class="d-block w-100" alt="...">
+            </div>
+  
+         
+            <div class="carousel-item">
+              <img src="images/A4.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- end of slider -->
+
+
+  <br><br>
+
+  <!-- start of parent box (main) -->
+  <div class="parent d-flex ">
+
+    <!-- start of box1 (left) -->
+    <div class="box1">
+      <div class="left">
+        <h1 class="titles">Playlist</h1>
+        <div class="playlist ">
+          <h4 class="active"><i class="bi bi-music-note-beamed"></i>Playlist</h4>
+          <!-- <i class="bi bi-music-note-beamed"></i> bootstrap music icon font link  -->
+          <h4 class="active"><i class="bi bi-music-note-beamed"></i>Last Listening</h4>
+          <h4 class="active"><i class="bi bi-music-note-beamed"></i>Recommended</h4>
+        </div>
+        <div class="left_songs">
+          <li class="songs">
+            <span style="margin-left: 10px;">01</span>
+            <a href="songs/B1.mp3"> <img src="img/1.jpg" alt="Alan" style="margin-left: 40px"></a>
+            <h5>
+              On My Way
+              <div class="subtitle">Alan Walker</div>
+            </h5>   
+            <a href="#" onclick="playSong('songs/B1.mp3', 'button1'); return false;">
+              <i class="bi playListPlay bi-play-circle-fill" id="button1" style="margin-left: 4px; margin-bottom: 9px;"></i>
+            </a>
+          </li>
+
+          <li class="songs">
+            <span style="margin-left: 10px;">02</span>
+            <a href="songs/B3.mp3"> <img src="img/3.jpg" alt="Alan" style="margin-left: 40px"></a>
+            <h5>
+             Cartoon
+              <div class="subtitle">Mas Y Mas</div>
+            </h5>
+         
+
+            <a href="#" onclick="playSong('songs/B3.mp3', 'button2'); return false;">
+              <i class="bi playListPlay bi-play-circle-fill" id="button2" style="margin-left: 4px; margin-bottom: 9px;"></i>
+            </a>
+
+
+
+          </li>
+
+          <li class="songs">
+            <span style="margin-left: 10px;">03</span>
+            <a href="songs/B7.mp3"> <img src="img/7.jpg" alt="Alan" style="margin-left: 40px"></a>
+            <h5>
+              Tamasha
+              <div class="subtitle">Lucky Ali</div>
+            </h5>
+         
+
+            <a href="#" onclick="playSong('songs/B7.mp3', 'button3'); return false;">
+              <i class="bi playListPlay bi-play-circle-fill" id="button3" style="margin-left: 4px; margin-bottom: 9px;"></i>
+            </a>
+   
+          </li>
+
+          <li class="songs">
+            <span style="margin-left: 10px;">04</span>
+            <a href="songs/B9.mp3"> <img src="img/9.jpg" alt="Alan" style="margin-left: 40px"></a>
+            <h5>
+              Dilbar
+              <div class="subtitle">Neha Kakkar
+              </div>
+            </h5>
+            <a href="#" onclick="playSong('songs/B9.mp3', 'button4'); return false;">
+              <i class="bi playListPlay bi-play-circle-fill" id="button4" style="margin-left: 4px; margin-bottom: 9px;"></i>
+            </a>
+          
+          </li>
+
+
+
+          <li class="songs">
+            <span style="margin-left: 10px;">05</span>
+            <a href="songs/B10.mp3"> <img src="img/10.jpg" alt="Alan" style="margin-left: 40px"></a>
+            <h5>
+              Luka Chuppi
+              <div class="subtitle">Arijit singh</div>
+            </h5>
+            <a href="#" onclick="playSong('songs/B10.mp3', 'button5'); return false;">
+              <i class="bi playListPlay bi-play-circle-fill" id="button5" style="margin-left: 4px; margin-bottom: 9px;"></i>
+            </a>
+
+          </li>
+
+          <li class="songs">
+            <span style="margin-left: 10px;" >06</span>
+            <a href="songs/B11.mp3"> <img src="img/11.jpg" alt="Alan" style="margin-left: 40px"></a>
+            <h5>
+              Lagadi lahore di
+              <div class="subtitle">Honey Singh</div>
+            </h5>
+            <a href="#" onclick="playSong('songs/B11.mp3', 'button6'); return false;">
+              <i class="bi playListPlay bi-play-circle-fill" id="button6" style="margin-left: 4px; margin-bottom: 9px;"></i>
+            </a>
+
+          </li>
+
+          <li class="songs">
+            <span style="margin-left: 10px;">07</span>
+            <a href="songs/B12.mp3"> <img src="img/12.jpg" alt="Alan" style="margin-left: 40px"></a>
+            <h5>
+              Putt
+              <div class="subtitle">Diljit_Dosanjh</div>
+            </h5>
+            <a href="#" onclick="playSong('songs/B12.mp3', 'button7'); return false;">
+              <i class="bi playListPlay bi-play-circle-fill" id="button7" style="margin-left: 4px; margin-bottom: 9px;"></i>
+            </a>
+       
+          </li>
+
+          <li class="songs">
+            <span style="margin-left: 10px;">08</span>
+            <a href="songs/B15.mp3"> <img src="img/15.jpg" alt="Alan" style="margin-left: 40px"></a>
+            <h5>
+              Lut Gaye
+              <div class="subtitle">Atif Aslam</div>
+            </h5>
+            <a href="#" onclick="playSong('songs/B15.mp3', 'button8'); return false;">
+              <i class="bi playListPlay bi-play-circle-fill" id="button8" style="margin-left: 4px; margin-bottom: 9px;"></i>
+            </a>
+            
+          </li>
+
+        </div>
+      </div>
+    </div>
+    <!-- end of box1 -->
+
+
+    <!-- start of box 2 -->
+    <div class="box2">
+      <nav class="navbar bg-body-primary-border bg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand titles">SoundPulse</a>
+          <form class="d-flex" role="search">
+            <input class="form-control me-2" type="search" placeholder="Search songs" aria-label="Search">
+            <input class="btn" type="button" value="Register" style="color:#efbbff;background:#660066;margin-right:2px">
+          </form>
+        </div>
+      </nav>
+
+      <div class="hs-text">
+        <h2><span>Listen </span> to new music.</h2>
+        <p> I want to express my gratitude for choosing our platform as your preferred place for music consumption. We strive to provide a seamless and enjoyable experience for all our users, and I'm glad to hear that you're enjoying listening to songs through our platform.</p>
+
+        <input class=" btn" type="button" value="Download Now"
+          style="color:#efbbff;background:#660066;margin-right:2px">
+        <input class=" btn btn-sm" type="button" value="Start free trail"
+          style="color:#efbbff;background:#800080;margin-right:2px">
+      </div>
+
+      <!-- START OF POPULAR SONGS -->
+      <div class="popular_songs">
+        <div class="list1">
+          <h4 class="titles">New Releases</h4>
+          <div class="btn_s">
+           
+            <i class="bi bi-arrow-left-short" id="pop-art_left"></i>
+            <i class="bi bi-arrow-right-short" id="pop-art_right"></i>
+          </div>
+        </div>
+
+        <div class="cardsBt">
+        
+          <li class="card">
+            <div class="img_play">
+              <a onclick="playsongs('songs/1.mp3')" ondblclick="pausesongs()">
+              <i class="bi playListPlay bi-play-circle-fill"  style="margin-left: 40px; margin-top: 35px;"></i>
+                <img src="images/1.jpg" alt="alan">
+            </div>
+            <h5>Unstopable
+              <br>
+              <div class="subtitle">Sia</div>
+            </h5>
+          </li>
+          
+          <li class="card">
+            <div class="img_play">
+
+              <a onclick="playsongs('songs/2.mp3')" ondblclick="pausesongs()">
+              <i class="bi playListPlay bi-play-circle-fill"  style="margin-left: 40px; margin-top: 35px;"></i>
+                <img src="images/2.jpg" alt="alan">
+              </a>
+
+            </div>
+            <h5>Something Just Like This
+              <br>
+              <div class="subtitle">Chainsmokers</div>
+            </h5>
+          </li>
+
+          <li class="card">
+            <div class="img_play">
+              <!-- <img src="img/c1.jpg" alt="alan">
+              <i class="bi playListPlay bi-play-circle-fill" id="3"></i> -->
+              <a onclick="playsongs('songs/7.mp3')" ondblclick="pausesongs()">
+              <i class="bi playListPlay bi-play-circle-fill"  style="margin-left: 40px; margin-top: 35px;"></i>
+                <img src="images/7.jpg" alt="alan">
+              </a>
+            </div>
+            <h5>A Thousand Years
+              <br>
+              <div class="subtitle">Christina Perri</div>
+            </h5>
+          </li>
+
+          <li class="card">
+            <div class="img_play">
+              <a onclick="playsongs('songs/3.mp3')" ondblclick="pausesongs()">
+              <i class="bi playListPlay bi-play-circle-fill"  style="margin-left: 40px; margin-top: 35px;"></i>
+                <img src="images/3.jpg" alt="alan">
+              </a>
+            </div>
+            <h5>Ek Zindagi
+              <br>
+              <div class="subtitle">Sachin–Jigar</div>
+            </h5>
+          </li>
+
+          <li class="card">
+            <div class="img_play">
+              <a onclick="playsongs('songs/4.mp3')" ondblclick="pausesongs()">
+              <i class="bi playListPlay bi-play-circle-fill"  style="margin-left: 40px; margin-top: 35px;"></i>
+                <img src="images/4.jpg" alt="alan">
+              </a>
+            </div>
+            <h5>Nacho Nacho
+              <br>
+              <div class="subtitle"> Vishal Mishra
+              </div>
+            </h5>
+          </li>
+
+          <li class="card">
+            <div class="img_play">
+              <a onclick="playsongs('songs/5.mp3')" ondblclick="pausesongs()">
+              <i class="bi playListPlay bi-play-circle-fill"  style="margin-left: 40px; margin-top: 35px;"></i>
+                <img src="images/5.jpg" alt="alan">
+              </a>
+            </div>
+            <h5>Perfect
+              <br>
+              <div class="subtitle"> Ed Sheeran
+              </div>
+            </h5>
+          </li>
+
+          <li class="card">
+            <div class="img_play">
+              <a onclick="playsongs('songs/8.mp3')" ondblclick="pausesongs()">
+              <i class="bi playListPlay bi-play-circle-fill"  style="margin-left: 40px; margin-top: 35px;"></i>
+                <img src="images/8.jpg" alt="alan">
+              </a>
+            </div>
+            <h5>Good Girl Gone Bad
+              <br>
+              <div class="subtitle">Rihana</div>
+            </h5>
+          </li>
+
+          <li class="card">
+            <div class="img_play">
+              <a onclick="playsongs('songs/6.mp3')" ondblclick="pausesongs()">
+              <i class="bi playListPlay bi-play-circle-fill"  style="margin-left: 40px; margin-top: 35px;"></i>
+                <img src="images/6.jpg" alt="alan">
+              </a>
+            </div>
+            <h5>Roar
+              <br>
+              <div class="subtitle">Katy Perry
+              </div>
+            </h5>
+          </li>
+
+
+        </div>
+        <!-- END OF POPULAR SONGS CARDS -->
+
+      </div>
+      <!-- end of POPULAR SONGS -->
+
+      
+
+      <br>
+
+      <!-- START OF POPULAR ARTIST -->
+      <div class="popular_artists">
+        <div class="list2">
+          <h4 class="titles">Top Artists</h4>
+          <div class="btn_s">
+            <i id="left" class="bi bi-arrow-left-short"></i>
+            <i id="right" class="bi bi-arrow-right-short"></i>
+          </div>
+        </div>
+        <div class="artists">
+
+          <li>
+            <img src="img/arjit.jpg" alt="Arjit Singh" title="Arjit Singh">
+          </li>
+          <li>
+            <img src="img/alan.jpg" alt="Alan Walker" title="Alan Walker">
+          </li>
+          <li>
+            <img src="img/atif.jpg" alt="Atif Aslam" title="Atif Aslam">
+          </li>
+          <li>
+            <img src="img/guru.jpg" alt="Guru RAndawa" title="Guru Randawa">
+          </li>
+          <li>
+            <img src="img/dhvani.jpg" alt="Dhvani" title="Dhvani">
+          </li>
+          <li>
+            <img src="img/Diljit_Dosanjh.jpg" alt="Diljit Dosanjh" title="Diljit Dosanjh">
+          </li>
+          <li>
+            <img src="img/jubin Nautiyal.jpg" alt="Jubin Nautiyal" title="Jubin Nautiyal">
+          </li>
+          <li>
+            <img src="img/neha.jpg" alt="Neha Kakker" title="Neha Kakker">
+          </li>
+          <li>
+            <img src="img/justin-bieber-lede.jpg" alt="Justin Bieber" title="Justin Bieber">
+          </li>
+          <li>
+            <img src="img/honey.jpg" alt="Honey Singh" title="Honey Singh">
+          </li>
+          <li>
+            <img src="img/akhil.jpg" alt="Akhil" title="Akhil">
+          </li>
+
+        </div>
+
+      </div>
+      <!-- END OF POPULAR ARTIST -->
+
+
+
+    </div>
+    <!-- end of box 2 -->
+    </header>
+
+  </div>
+
+
+  <!-- end of parent box (main) -->
+
+  <!-- music player -->
+  
+
+  <!-- blogs section ends -->
+
+
+
+
+
+
+    <div class="row">
+      <footer class="row align-items-center" style="justify-content:center; background:#efbbff">&#169;
+        <script>
+          document.write(new Date().getFullYear())
+        </script> www.soundpulse.com. All rights reserved.
+      </footer>
+    </div>
+
+
+
+</body>
+
+</html>
